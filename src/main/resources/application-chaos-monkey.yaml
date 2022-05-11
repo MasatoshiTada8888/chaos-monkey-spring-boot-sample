@@ -1,0 +1,25 @@
+chaos:
+  monkey:
+    enabled: true
+    watcher:
+      rest-controller: true
+      controller: true
+    assaults:
+      level: 1
+      latencyActive: false
+      latency-range-start: 3000
+      latency-range-end: 5000
+      exceptions-active: false
+      kill-application-active: false
+      kill-application-cron-expression: "*/1 * * * * *"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    chaosmonkey:
+      enabled: true
+    chaosmonkeyjmx:
+      enabled: true
